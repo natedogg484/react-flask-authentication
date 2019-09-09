@@ -9,6 +9,7 @@ import './App.css';
 import Home from './components/Home';
 import Login from './components/Login';
 import Register from './components/Register';
+import Users from './components/Users'
 
 function App() {
   return (
@@ -25,15 +26,19 @@ function App() {
                 <li className="nav-item">
                   <a className="nav-link" href="/login">Login</a>
                 </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/users">Users</a>
+                </li>
               </ul>
             </div>
           </nav>
           <div className='jumbotron text-center'>
-            <h5>Authentication Practice with React and Flask</h5>
+            <h1>Authentication Practice with React and Flask</h1>
           </div>
           <Route path='/' exact component={Home} />
           <Route path='/login' component={Login} />
           <Route path='/register' component={Register} />
+          <Route path='/users' component={Users} />
         </div>
       </Wrapper>
     </Router>

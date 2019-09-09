@@ -39,11 +39,11 @@ export default class Register extends Component {
                         <div className='card-body'>
                             <form onSubmit={this.handleSubmit}>
                                 <div className='form-group'>
-                                    <label htmlFor='username'>username</label>
-                                    <input type='username' className='form-control' id='usernameInput' placeholder='Enter Username' name='username' value={this.state.username} onChange={this.handleChange}></input>
+                                    <label htmlFor='username'>Username</label>
+                                    <input type='username' className='form-control' id='usernameInput' placeholder='Enter Desired Username' name='username' value={this.state.username} onChange={this.handleChange}></input>
                                 </div>
                                 <div className='form-group'>
-                                    <label htmlFor="passowrd">Password</label>
+                                    <label htmlFor="password">Password</label>
                                     <input type='password' className='form-control' id='passwordInput' placeholder="Enter Password" name='password' value={this.state.password} onChange={this.handleChange}></input>
                                 </div>
                                 <button type='submit' className='btn btn-dark'>Register</button>
