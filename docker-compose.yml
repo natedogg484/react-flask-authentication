@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  middleware:
+    build: ./middleware
+    expose: 
+      - 5000
+    ports:
+      - 5000:5000
+    volumes:
+      - ./middleware:/usr/src/app
+    environment:
+      - FLASK_ENV=development
+      - FLASK_APP=run.py
+      - FLASK_DEBUG=1
+  frontend:
+    build: ./client
+    expose:
+      - 3000
+    ports:
+      - 3000:3000
+    volumes:
+      - ./client/src/usr/src/app/src
+      - ./client/public:/usr/src/app/public
+    links:
+      - 'middleware:middleware'
